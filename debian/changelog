@@ -1,0 +1,18 @@
+lighttpd1.5 (1.5git3) beta; urgency=low
+
+  * mod_mem_cache fixes
+
+ -- root <root@join1024.ebook.bg>  Tue, 12 Jul 2011 06:58:15 +0300
+
+lighttpd1.5 (1.5git2) beta; urgency=low
+
+  * add mod_cache
+  * add mod_mem_cache 
+
+ -- root <root@join1024.ebook.bg>  Tue, 12 Jul 2011 06:38:01 +0300
+
+lighttpd1.5 (1.5git1) beta; urgency=low
+
+  * Initial release. (Closes: #XXXXXX)
+
+ -- root <root@nas-pptp.fvpn.com>  Mon, 18 Apr 2011 21:44:03 +0300

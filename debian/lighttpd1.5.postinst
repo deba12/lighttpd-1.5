@@ -1,0 +1,19 @@
+#! /bin/sh -e
+# postinst script for lighttpd
+
+if [ "$1" = "configure" ]; then
+   	if [ ! -r /var/www/index.lighttpd.html ];
+   	then
+   		cp /usr/share/lighttpd/index.html /var/www/index.lighttpd.html
+	fi
+fi
+
+start_failed() 
+{
+	echo "Failed to start Lighttpd. Is another webserver running already?"
+	exit 0
+}
+
+#DEBHELPER#
+
+exit 0

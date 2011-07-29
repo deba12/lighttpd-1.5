@@ -1,0 +1,6 @@
+lighttpd (1.4.23-1) unstable; urgency=low
+
+  spawn-fcgi is now separate package. Please install "spawn-fcgi" package if 
+  you need it.
+
+ -- Krzysztof Krzyżaniak (eloy) <eloy@debian.org>  Thu, 09 Jul 2009 15:53:14 +0200

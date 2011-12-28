@@ -70,7 +70,8 @@ common_src=buffer.c log.c \
       network_gthread_freebsd_sendfile.c \
       http_resp.c http_resp_parser.c \
       http_req.c http_req_parser.c \
-      http_req_range.c http_req_range_parser.c timing.c
+      http_req_range.c http_req_range_parser.c timing.c \
+	  splaytree.c
       
 src = server.c response.c connections.c network.c \
       configfile.c configparser.c request.c proc_open.c
@@ -111,6 +112,11 @@ lib_LTLIBRARIES += mod_evasive.la
 mod_evasive_la_SOURCES = mod_evasive.c
 mod_evasive_la_LDFLAGS = -module -export-dynamic -avoid-version -no-undefined
 mod_evasive_la_LIBADD = $(common_libadd)
+
+lib_LTLIBRARIES += mod_mem_cache.la
+mod_mem_cache_la_SOURCES = mod_mem_cache.c
+mod_mem_cache_la_LDFLAGS = -module -export-dynamic -avoid-version -no-undefined
+mod_mem_cache_la_LIBADD = $(common_libadd)
 
 lib_LTLIBRARIES += mod_webdav.la
 mod_webdav_la_SOURCES = mod_webdav.c

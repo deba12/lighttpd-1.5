@@ -441,7 +441,7 @@ URIHANDLER_FUNC(mod_staticfile_subrequest) {
 		mtime = ds->value;
 	}
 
-	if (HANDLER_FINISHED == http_response_handle_cachable(srv, con, mtime)) {
+	if (HANDLER_FINISHED == http_response_handle_cachable(srv, con, mtime, con->physical.etag)) {
 		return HANDLER_FINISHED;
 	} else if (con->conf.range_requests &&
 	           NULL != array_get_element(con->request.headers, CONST_STR_LEN("Range"))) {
